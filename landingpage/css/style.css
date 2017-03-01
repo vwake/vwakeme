@@ -1,0 +1,647 @@
+/**
+ * Keyframes.
+ */
+@-webkit-keyframes rise {
+  0% {
+    margin-top: 100%;
+  }
+  70% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    margin-top: -50px;
+    opacity: 0;
+  }
+}
+@keyframes rise {
+  0% {
+    margin-top: 100%;
+  }
+  70% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    margin-top: -50px;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes sway {
+  20% {
+    -webkit-transform: translate(-28px);
+            transform: translate(-28px);
+  }
+  25% {
+    -webkit-transform: translate(-30px);
+            transform: translate(-30px);
+  }
+  70% {
+    -webkit-transform: translate(28px);
+            transform: translate(28px);
+  }
+  75% {
+    -webkit-transform: translate(30px);
+            transform: translate(30px);
+  }
+}
+@keyframes sway {
+  20% {
+    -webkit-transform: translate(-28px);
+            transform: translate(-28px);
+  }
+  25% {
+    -webkit-transform: translate(-30px);
+            transform: translate(-30px);
+  }
+  70% {
+    -webkit-transform: translate(28px);
+            transform: translate(28px);
+  }
+  75% {
+    -webkit-transform: translate(30px);
+            transform: translate(30px);
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  background-color: #fff;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iNTklIiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYjNkZWVmIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(59%, #ffffff), color-stop(100%, #b3deef));
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 59%, #b3deef 100%);
+  background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 59%, #b3deef 100%);
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FFB3DEEF');
+}
+
+.wrapper {
+  -webkit-animation: sway 8s ease-in-out infinite;
+          animation: sway 8s ease-in-out infinite;
+  position: relative;
+}
+
+.circle {
+  background-color: #b3deef;
+  opacity: 1;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.wrapper-1 {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+.circle-1 {
+  -webkit-animation: rise 4s linear infinite;
+          animation: rise 4s linear infinite;
+  height: 12px;
+  left: 7%;
+  top: calc(100% + $top);
+  width: 12px;
+}
+
+.wrapper-2 {
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+
+.circle-2 {
+  -webkit-animation: rise 4s linear infinite;
+          animation: rise 4s linear infinite;
+  height: 26px;
+  left: 72%;
+  top: calc(100% + $top);
+  width: 26px;
+}
+
+.wrapper-3 {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.circle-3 {
+  -webkit-animation: rise 5.5s linear infinite;
+          animation: rise 5.5s linear infinite;
+  height: 44px;
+  left: 91%;
+  top: calc(100% + $top);
+  width: 44px;
+}
+
+.wrapper-4 {
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+
+.circle-4 {
+  -webkit-animation: rise 6s linear infinite;
+          animation: rise 6s linear infinite;
+  height: 17px;
+  left: 59%;
+  top: calc(100% + $top);
+  width: 17px;
+}
+
+.wrapper-5 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.circle-5 {
+  -webkit-animation: rise 3.5s linear infinite;
+          animation: rise 3.5s linear infinite;
+  height: 41px;
+  left: 49%;
+  top: calc(100% + $top);
+  width: 41px;
+}
+
+.wrapper-6 {
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+
+.circle-6 {
+  -webkit-animation: rise 6.5s linear infinite;
+          animation: rise 6.5s linear infinite;
+  height: 41px;
+  left: 83%;
+  top: calc(100% + $top);
+  width: 41px;
+}
+
+.wrapper-7 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.circle-7 {
+  -webkit-animation: rise 3s linear infinite;
+          animation: rise 3s linear infinite;
+  height: 26px;
+  left: 52%;
+  top: calc(100% + $top);
+  width: 26px;
+}
+
+.wrapper-8 {
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
+}
+
+.circle-8 {
+  -webkit-animation: rise 7.5s linear infinite;
+          animation: rise 7.5s linear infinite;
+  height: 19px;
+  left: 85%;
+  top: calc(100% + $top);
+  width: 19px;
+}
+
+.wrapper-9 {
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
+}
+
+.circle-9 {
+  -webkit-animation: rise 7s linear infinite;
+          animation: rise 7s linear infinite;
+  height: 50px;
+  left: 4%;
+  top: calc(100% + $top);
+  width: 50px;
+}
+
+.wrapper-10 {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.circle-10 {
+  -webkit-animation: rise 7.5s linear infinite;
+          animation: rise 7.5s linear infinite;
+  height: 44px;
+  left: 30%;
+  top: calc(100% + $top);
+  width: 44px;
+}
+
+.wrapper-11 {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.circle-11 {
+  -webkit-animation: rise 6s linear infinite;
+          animation: rise 6s linear infinite;
+  height: 33px;
+  left: 46%;
+  top: calc(100% + $top);
+  width: 33px;
+}
+
+.wrapper-12 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.circle-12 {
+  -webkit-animation: rise 4.5s linear infinite;
+          animation: rise 4.5s linear infinite;
+  height: 23px;
+  left: 50%;
+  top: calc(100% + $top);
+  width: 23px;
+}
+
+.wrapper-13 {
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
+}
+
+.circle-13 {
+  -webkit-animation: rise 5.5s linear infinite;
+          animation: rise 5.5s linear infinite;
+  height: 44px;
+  left: 32%;
+  top: calc(100% + $top);
+  width: 44px;
+}
+
+.wrapper-14 {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+.circle-14 {
+  -webkit-animation: rise 3.5s linear infinite;
+          animation: rise 3.5s linear infinite;
+  height: 33px;
+  left: 86%;
+  top: calc(100% + $top);
+  width: 33px;
+}
+
+.wrapper-15 {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.circle-15 {
+  -webkit-animation: rise 5s linear infinite;
+          animation: rise 5s linear infinite;
+  height: 32px;
+  left: 99%;
+  top: calc(100% + $top);
+  width: 32px;
+}
+
+.wrapper-16 {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.circle-16 {
+  -webkit-animation: rise 7s linear infinite;
+          animation: rise 7s linear infinite;
+  height: 36px;
+  left: 7%;
+  top: calc(100% + $top);
+  width: 36px;
+}
+
+.wrapper-17 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.circle-17 {
+  -webkit-animation: rise 5.5s linear infinite;
+          animation: rise 5.5s linear infinite;
+  height: 31px;
+  left: 32%;
+  top: calc(100% + $top);
+  width: 31px;
+}
+
+.wrapper-18 {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.circle-18 {
+  -webkit-animation: rise 7.5s linear infinite;
+          animation: rise 7.5s linear infinite;
+  height: 19px;
+  left: 33%;
+  top: calc(100% + $top);
+  width: 19px;
+}
+
+.wrapper-19 {
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+
+.circle-19 {
+  -webkit-animation: rise 6.5s linear infinite;
+          animation: rise 6.5s linear infinite;
+  height: 40px;
+  left: 65%;
+  top: calc(100% + $top);
+  width: 40px;
+}
+
+.wrapper-20 {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.circle-20 {
+  -webkit-animation: rise 7.5s linear infinite;
+          animation: rise 7.5s linear infinite;
+  height: 41px;
+  left: 37%;
+  top: calc(100% + $top);
+  width: 41px;
+}
+
+.wrapper-21 {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.circle-21 {
+  -webkit-animation: rise 3s linear infinite;
+          animation: rise 3s linear infinite;
+  height: 19px;
+  left: 3%;
+  top: calc(100% + $top);
+  width: 19px;
+}
+
+.wrapper-22 {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.circle-22 {
+  -webkit-animation: rise 4.5s linear infinite;
+          animation: rise 4.5s linear infinite;
+  height: 44px;
+  left: 81%;
+  top: calc(100% + $top);
+  width: 44px;
+}
+
+.wrapper-23 {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+.circle-23 {
+  -webkit-animation: rise 5.5s linear infinite;
+          animation: rise 5.5s linear infinite;
+  height: 42px;
+  left: 12%;
+  top: calc(100% + $top);
+  width: 42px;
+}
+
+.wrapper-24 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.circle-24 {
+  -webkit-animation: rise 5s linear infinite;
+          animation: rise 5s linear infinite;
+  height: 18px;
+  left: 38%;
+  top: calc(100% + $top);
+  width: 18px;
+}
+
+.wrapper-25 {
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
+}
+
+.circle-25 {
+  -webkit-animation: rise 6.5s linear infinite;
+          animation: rise 6.5s linear infinite;
+  height: 26px;
+  left: 78%;
+  top: calc(100% + $top);
+  width: 26px;
+}
+
+.wrapper-26 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.circle-26 {
+  -webkit-animation: rise 5s linear infinite;
+          animation: rise 5s linear infinite;
+  height: 40px;
+  left: 64%;
+  top: calc(100% + $top);
+  width: 40px;
+}
+
+.wrapper-27 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.circle-27 {
+  -webkit-animation: rise 7.5s linear infinite;
+          animation: rise 7.5s linear infinite;
+  height: 21px;
+  left: 78%;
+  top: calc(100% + $top);
+  width: 21px;
+}
+
+.wrapper-28 {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.circle-28 {
+  -webkit-animation: rise 3s linear infinite;
+          animation: rise 3s linear infinite;
+  height: 28px;
+  left: 27%;
+  top: calc(100% + $top);
+  width: 28px;
+}
+
+.wrapper-29 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.circle-29 {
+  -webkit-animation: rise 7s linear infinite;
+          animation: rise 7s linear infinite;
+  height: 27px;
+  left: 54%;
+  top: calc(100% + $top);
+  width: 27px;
+}
+
+.wrapper-30 {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.circle-30 {
+  -webkit-animation: rise 6s linear infinite;
+          animation: rise 6s linear infinite;
+  height: 20px;
+  left: 50%;
+  top: calc(100% + $top);
+  width: 20px;
+}
+
+.wrapper-31 {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+.circle-31 {
+  -webkit-animation: rise 3.5s linear infinite;
+          animation: rise 3.5s linear infinite;
+  height: 25px;
+  left: 5%;
+  top: calc(100% + $top);
+  width: 25px;
+}
+
+.wrapper-32 {
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+
+.circle-32 {
+  -webkit-animation: rise 6s linear infinite;
+          animation: rise 6s linear infinite;
+  height: 34px;
+  left: 79%;
+  top: calc(100% + $top);
+  width: 34px;
+}
+
+.wrapper-33 {
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+
+.circle-33 {
+  -webkit-animation: rise 3.5s linear infinite;
+          animation: rise 3.5s linear infinite;
+  height: 16px;
+  left: 69%;
+  top: calc(100% + $top);
+  width: 16px;
+}
+
+.wrapper-34 {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.circle-34 {
+  -webkit-animation: rise 3.5s linear infinite;
+          animation: rise 3.5s linear infinite;
+  height: 38px;
+  left: 4%;
+  top: calc(100% + $top);
+  width: 38px;
+}
+
+.wrapper-35 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.circle-35 {
+  -webkit-animation: rise 4s linear infinite;
+          animation: rise 4s linear infinite;
+  height: 15px;
+  left: 11%;
+  top: calc(100% + $top);
+  width: 15px;
+}
+
+.wrapper-36 {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.circle-36 {
+  -webkit-animation: rise 6s linear infinite;
+          animation: rise 6s linear infinite;
+  height: 37px;
+  left: 25%;
+  top: calc(100% + $top);
+  width: 37px;
+}
+
+.wrapper-37 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.circle-37 {
+  -webkit-animation: rise 5s linear infinite;
+          animation: rise 5s linear infinite;
+  height: 20px;
+  left: 17%;
+  top: calc(100% + $top);
+  width: 20px;
+}
+
+.wrapper-38 {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.circle-38 {
+  -webkit-animation: rise 3.5s linear infinite;
+          animation: rise 3.5s linear infinite;
+  height: 37px;
+  left: 25%;
+  top: calc(100% + $top);
+  width: 37px;
+}
+
+.wrapper-39 {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.circle-39 {
+  -webkit-animation: rise 7s linear infinite;
+          animation: rise 7s linear infinite;
+  height: 45px;
+  left: 59%;
+  top: calc(100% + $top);
+  width: 45px;
+}
