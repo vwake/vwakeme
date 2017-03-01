@@ -1,7 +1,6 @@
   @import url('https://fonts.googleapis.com/css?family=Roboto');
   @import url('https://fonts.googleapis.com/css?family=Pacifico');
   body {
-      background: #FFFF9D;
       font-family: 'Roboto', sans-serif;
   }
 
@@ -91,8 +90,6 @@
       font-family: 'Roboto', sans-serif;
       font-weight: bolder;
       text-shadow: 2px 0px 0px rgb(255, 255, 157);*/
-
-      color: #ffff9d;
     font-size: 5vw;
     font-family: 'Roboto', sans-serif;
     /* font-weight: bolder; */
@@ -106,7 +103,6 @@
   }
 
   .banner-alt {
-    color: #FF6138;
         font-size: 5vw;
         font-family: 'Roboto', sans-serif;
         font-weight: 900;
@@ -142,11 +138,11 @@
   #team {}
 
   #portfolio {
-    background: #00A388;
+
   }
 
   #intro {
-      background: #79BD8F;
+
   }
 
 
@@ -772,7 +768,7 @@
     }
 
     .slide-item-wrapper {
-    background: #ff6138;
+
     width: 100vw;
     height: 100vh;
     margin: auto;

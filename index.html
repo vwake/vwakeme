@@ -74,14 +74,94 @@
     </nav>
     <div class="scene" id="homepage">
         <div class="logowrapper">
-            <svg id="svglogo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" viewBox="0 0 121 103" xml:space="preserve" enable-background="new 0 0 121 103" width="100%">
-                <g id="Layer_3_copy_3">
-                    <polygon id="leftlink" points="97 55 97 79 73.7 79 49 79 49 103 73.7 103 97.9 103 121 103 121 78.4 121 55 " fill="#202528" />
-                    <polygon id="rightlink" points="49 0 24.8 0 0 0 0 23.2 0 48 24 48 24 24 49 24 73 24 73 0 " fill="#3F382A" />
-                    <text id="text-link" class="text" transform="matrix(1 0 0 1 25.5 49)" fill="#FF6138"> LINK </text>
-                    <text id="text-labs" class="text" transform="matrix(1 0 0 1 25.5 74)" fill="#FF6138"> LABS </text>
-                </g>
-            </svg>
+
+<STYLE>
+
+.container1{
+    width: 490px;
+    height: 400px;
+    position: absolute;
+    top: calc(50% - 200px);
+    left: calc(50% - 245px);
+		overflow: hidden;
+}
+@keyframes vue{
+	0%{
+		transform: scale(0);
+	}
+	20%{
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+@keyframes vuebefore{
+	0%{
+		bottom: 400px;
+	}
+	20%{
+    bottom: 140px;
+	}
+	100%{
+		bottom: 140px;
+	}
+}
+@keyframes vueafter{
+	0%{
+		bottom: 400px;
+	}
+	20%{
+    bottom: 270px;
+	}
+	100%{
+		bottom: 270px;
+	}
+}
+.vue{
+	width: 0;
+	height: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-top: 400px solid #41b883;
+	border-left: 245px solid transparent;
+	border-right: 245px solid transparent;
+
+}
+.vue:before{
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	bottom: 140px;
+	left: -160px;
+	border-top: 260px solid #35495e;
+	border-left: 160px solid transparent;
+	border-right: 160px solid transparent;
+	animation: vuebefore 5s linear;
+}
+.vue:after{
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	bottom: 270px;
+	left: -80px;
+	border-top: 130px solid #FFF;
+	border-left: 80px solid transparent;
+	border-right: 80px solid transparent;
+	animation: vueafter 5s linear;
+}
+
+</STYLE>
+
+<section class="container1">
+	<div class="vue"></div>
+</section>
+
+
+
         </div>
 
         <ul class="buttons">
