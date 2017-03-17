@@ -426,7 +426,7 @@
   }
 
   #tube {
-      fill: #ffff9d;
+      fill: #33a373;
       -webkit-transform: rotate(6deg) translateY(60px);
       transform: rotate(6deg) translateY(60px);
       -webkit-transform-origin: 50% 50%;
@@ -587,7 +587,7 @@
   .eye {
       width: 100px;
       height: 100px;
-      background-color: #ff6138;
+background-color: #35495e;
       border-top-right-radius: 50px;
       border-top-left-radius: 50px;
       overflow: hidden;
@@ -825,7 +825,7 @@ canvas {
 }
 
 span.element {
-    color: #ffff9d;
+    color: #33a373;
 }
 
 
@@ -893,13 +893,16 @@ background-color: #00a388;
 
 
 .socialicons {
-    position: absolute;
-    bottom: 0;
+  position: absolute;
+bottom: 18px;
+width: 300px;
+text-align: center;
 }
 .slogo {
-  display:block-inline;
-      margin:0 10px;
-  cursor:pointer;
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+  text-align: center;
 
 }
 
