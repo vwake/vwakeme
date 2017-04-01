@@ -346,7 +346,7 @@
   }
 
   nav a:nth-child(n+2) {
-      color: #FF6138;
+          color: #ffffff;
       display: block;
       font-size: 2.5em;
       margin: 30px 0 30px 30px;
@@ -354,7 +354,7 @@
   }
 
   nav a:nth-child(n+2):after {
-      background: #ffff9d;
+          background: #33a373;
       content: '';
       display: block;
       height: 2px;
@@ -426,7 +426,7 @@
   }
 
   #tube {
-      fill: #33a373;
+          fill: #31a371;
       -webkit-transform: rotate(6deg) translateY(60px);
       transform: rotate(6deg) translateY(60px);
       -webkit-transform-origin: 50% 50%;
@@ -587,7 +587,7 @@
   .eye {
       width: 100px;
       height: 100px;
-background-color: #35495e;
+      background-color: #ff6138;
       border-top-right-radius: 50px;
       border-top-left-radius: 50px;
       overflow: hidden;
@@ -825,7 +825,7 @@ canvas {
 }
 
 span.element {
-    color: #33a373;
+        color: #41b883;
 }
 
 
@@ -891,18 +891,34 @@ background-color: #00a388;
 
 /*social media icons*/
 
+.socialtext {
+    color: white;
+}
 
+.socialtext h5 {
+    color: white;
+    font-weight: bold;
+    font-size: 1em  ;
+}
+
+.socialholder {
+    text-align: center;
+    position: fixed;
+    width: 300px;
+    bottom: 0;
+}
+
+.socialholder hr {
+  margin: 20px;
+  border-top: 1px solid #444;
+}
 .socialicons {
-  position: absolute;
-bottom: 18px;
-width: 300px;
-text-align: center;
+
 }
 .slogo {
-  display: inline-block;
-  margin: 0 10px;
-  cursor: pointer;
-  text-align: center;
+  display:block-inline;
+      margin:0 10px;
+  cursor:pointer;
 
 }
 
