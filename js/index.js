@@ -15,14 +15,6 @@ $(document).mousemove(function(e){
 
 
 	$(document).ready(function(){
-    $(".regular").slick({
-      infinite: true,
-      autoplay: true,
-      autoplaySpeed: 2500,
-      pauseOnFocus: false,
-      pauseOnHover:false,
-       arrows: false
-    });
 
     $(".element").typed({
         strings: ["Beautiful", "Innovative", "Minimlistic", "Clean", "Inspiring", "Unique"],
@@ -45,7 +37,7 @@ $(document).mousemove(function(e){
 
 
 
-        $menu.on("click","a.menulinks", function(){         
+        $menu.on("click","a.menulinks", function(){
 
             var $this = $(this),
                 href = $this.attr("href"),
@@ -167,7 +159,28 @@ $(document).mousemove(function(e){
         }
         );
 
+        var item_length = 3;
+        var slider = $(".regular").slick({
+          // infinite: true,
+          autoplay: true,
+          autoplaySpeed: 2500,
+          pauseOnFocus: false,
+          pauseOnHover:false,
+           arrows: false
+        });
 
+        slider.on('afterChange', function(event, slick, currentSlide, nextSlide){
+        //check the length of total items in .slide container
+      //if that number is the same with the number of the last slider
+      //Then pause the slider
+      if( item_length === slider.slick('slickCurrentSlide') ){
+        //this should do the same thing -> slider.slickPause();
+         slider.slick("setOption", "autoplay", false, 0 )
+
+
+      };
+      console.log(slider.slick('slickCurrentSlide'));
+    });
 
 
 
