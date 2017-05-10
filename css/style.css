@@ -77,11 +77,14 @@
   /*custom page styles*/
 
   .textwrapper {
-      text-align: center;
-      padding: 75px 0 0 0;
-      margin: auto;
-      width: 75vw;
-      font-family: 'Pacifico', cursive;
+    text-align: center;
+    margin: auto;
+    width: 75vw;
+    font-family: 'Pacifico', cursive;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
 
   .banner {
@@ -94,24 +97,22 @@
     font-family: 'Roboto', sans-serif;
     /* font-weight: bolder; */
     font-weight: 900;
-    letter-spacing: .15em;
+
     line-height: 1.1;
     text-transform: uppercase;
     margin: 0 auto;
     text-align: center;
-    text-shadow: 0 0 0 #33a373, 1px 1px #33a373, 2px 2px #33a373, 3px 3px #33a373, 4px 4px #33a373, 5px 5px #32a372, 6px 6px #32a272;
   }
 
   .banner-alt {
         font-size: 5vw;
         font-family: 'Roboto', sans-serif;
         font-weight: 900;
-        letter-spacing: .15em;
+
         line-height: 1.1;
         text-transform: uppercase;
         margin: 0 auto;
         text-align: center;
-        text-shadow: 0 0 0 #33a373, 1px 1px #33a373, 2px 2px #33a373, 3px 3px #33a373, 4px 4px #33a373, 5px 5px #32a372, 6px 6px #32a272;
   }
 
   .buttons {
@@ -798,7 +799,6 @@ canvas {
   text-transform: uppercase;
   margin: 0 auto;
   text-align: center;
-  text-shadow: 0 0 0 #ffff9d, 1px 1px #ffff9d, 2px 2px #ffff9d, 3px 3px #fff07e, 4px 4px #ffff9d, 5px 5px #fff591, 6px 6px #ffff9d;
 }
 
 /*Typing animation*/
