@@ -162,7 +162,7 @@ $(document).mousemove(function(e){
         var item_length = 3;
         var slider = $(".regular").slick({
           // infinite: true,
-          autoplay: true,
+          autoplay: false,
           autoplaySpeed: 2500,
           pauseOnFocus: false,
           pauseOnHover:false,
