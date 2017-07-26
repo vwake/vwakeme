@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
 
 <head>
@@ -127,91 +127,49 @@
         </div>
     </nav>
     <div class="scene" id="homepage">
+      <canvas id="c"></canvas>
+
         <div class="logowrapper">
 
-<STYLE>
+<style>
+.svglogo {
 
-.container1{
-    width: 490px;
-    height: 400px;
-    position: absolute;
-    top: calc(50% - 200px);
-    left: calc(50% - 245px);
-		overflow: hidden;
-}
-@keyframes vue{
-	0%{
-		transform: scale(0);
-	}
-	20%{
-		transform: scale(1);
-	}
-	100%{
-		transform: scale(1);
-	}
-}
-@keyframes vuebefore{
-	0%{
-		bottom: 400px;
-	}
-	20%{
-    bottom: 140px;
-	}
-	100%{
-		bottom: 140px;
-	}
-}
-@keyframes vueafter{
-	0%{
-		bottom: 400px;
-	}
-	20%{
-    bottom: 270px;
-	}
-	100%{
-		bottom: 270px;
-	}
-}
-.vue{
-	width: 0;
-	height: 0;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	border-top: 400px solid #41b883;
-	border-left: 245px solid transparent;
-	border-right: 245px solid transparent;
+  position: absolute;
+left: 50%;
+top: 50%;
 
-}
-.vue:before{
-	content: "";
-	width: 0;
-	height: 0;
-	position: absolute;
-	bottom: 140px;
-	left: -160px;
-	border-top: 260px solid #35495e;
-	border-left: 160px solid transparent;
-	border-right: 160px solid transparent;
-	animation: vuebefore 5s linear;
-}
-.vue:after{
-	content: "";
-	width: 0;
-	height: 0;
-	position: absolute;
-	bottom: 270px;
-	left: -80px;
-	border-top: 130px solid #FFF;
-	border-left: 80px solid transparent;
-	border-right: 80px solid transparent;
-	animation: vueafter 5s linear;
-}
+/*
+Nope =(
+margin-left: -25%;
+margin-top: -25%;
+*/
 
-</STYLE>
+/*
+Yep!
+*/
+transform: translate(-50%, -50%);
 
+/*
+Not even necessary really.
+e.g. Height could be left out!
+*/
+width: 40%;
+height: 50%;
+}
+</style>
 <section class="container1">
-	<div class="vue"></div>
+<div class="svglogo">
+
+  <?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 800 600" enable-background="new 0 0 800 600" xml:space="preserve">
+<text transform="matrix(1 0 0 1 179.4095 377.9733)"><tspan x="0" y="0" font-family="'Consolas'" font-size="275">&lt;</tspan><tspan x="151.2" y="0" font-family="'Calibri'" font-size="275">V</tspan><tspan x="307.2" y="0" font-family="'Consolas'" font-size="275">&gt;</tspan></text>
+<rect x="662.6" y="254.5" fill="none" width="3.4" height="2.7"/>
+</svg>
+</div>
+
 </section>
 
 
@@ -396,6 +354,20 @@
             </div>
 
         </div>
+        <style>
+
+        </style>
+  <div class="waveWrapper waveAnimation">
+  <div class="waveWrapperInner bgTop">
+    <div class="wave waveTop" style="background-image: url('img/wave-top.png')"></div>
+  </div>
+  <div class="waveWrapperInner bgMiddle">
+    <div class="wave waveMiddle" style="background-image: url('img/wave-mid.png')"></div>
+  </div>
+  <div class="waveWrapperInner bgBottom">
+    <div class="wave waveBottom" style="background-image: url('img/wave-bot.png')"></div>
+  </div>
+</div>
     </div>
 
 
