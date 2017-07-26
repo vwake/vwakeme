@@ -1,3 +1,12 @@
+// init controller
+  var controller = new ScrollMagic.Controller();
+  var scene = new ScrollMagic.Scene({
+									triggerElement: "#intro"
+								})
+								// .setTween("#menuburger, #menuburger:before, #menuburger:after", 0.5, {backgroundColor: "black"}) // trigger a TweenMax.to tween
+
+							//	.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+								.addTo(controller);
 
 
 $(document).mousemove(function(e){
@@ -22,7 +31,7 @@ $(document).mousemove(function(e){
 
 var c = document.getElementById('c');
 var ctx = c.getContext('2d');
-var cw = c.width = window.innerWidth-20;
+var cw = c.width = window.innerWidth-60;
 var ch = c.height = window.innerHeight;
 var rand = function(a,b){return ~~((Math.random()*(b-a+1))+a);}
 
@@ -217,7 +226,7 @@ loop();
 
     });
 
-
+// Logo Animation
 
     tl = new TimelineMax();
 
@@ -235,6 +244,8 @@ loop();
           tl.timeScale(1).seek(0);
         }
         );
+// end of Logo Animation
+
 
         var item_length = 3;
         var slider = $(".regular").slick({
@@ -256,7 +267,7 @@ loop();
 
 
       };
-      console.log(slider.slick('slickCurrentSlide'));
+      //console.log(slider.slick('slickCurrentSlide'));
     });
 
 
