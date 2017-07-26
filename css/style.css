@@ -4,6 +4,53 @@
       font-family: 'Roboto', sans-serif;
   }
 
+/*site overlay*/
+.overlay{
+  position:fixed;
+   background:url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/asanoha-400px.png);
+  -webkit-animation:100s scroll infinite linear;
+  -moz-animation:100s scroll infinite linear;
+  -o-animation:100s scroll infinite linear;
+  -ms-animation:100s scroll infinite linear;
+  animation:100s scroll infinite linear;
+  top:0;
+  left:0;
+  width:100%;
+ height:100%;
+}
+
+
+@-webkit-keyframes scroll{
+  100%{
+    background-position:0px -3000px;
+  }
+}
+
+@-moz-keyframes scroll{
+  100%{
+    background-position:0px -3000px;
+  }
+}
+
+@-o-keyframes scroll{
+  100%{
+    background-position:0px -3000px;
+  }
+}
+
+@-ms-keyframes scroll{
+  100%{
+    background-position:0px -3000px;
+  }
+}
+
+@keyframes scroll{
+  100%{
+    background-position:0px -3000px;
+  }
+}
+
+/*end of style overlay*/
 
   /*menu styles*/
 
@@ -515,7 +562,7 @@
   }
 
   #tube {
-          fill: #31a371;
+          fill: #813677;
       -webkit-transform: rotate(6deg) translateY(60px);
       transform: rotate(6deg) translateY(60px);
       -webkit-transform-origin: 50% 50%;
@@ -904,7 +951,7 @@
 }
 
 span.element {
-        color: #41b883;
+        color: #813677;
 }
 
 
