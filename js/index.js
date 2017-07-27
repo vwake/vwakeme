@@ -1,13 +1,53 @@
-// init controller
-  var controller = new ScrollMagic.Controller();
-  var scene = new ScrollMagic.Scene({
-									triggerElement: "#intro"
-								})
-								// .setTween("#menuburger, #menuburger:before, #menuburger:after", 0.5, {backgroundColor: "black"}) // trigger a TweenMax.to tween
+$(function () { // wait for document ready
+  var flightpath = {
+    entry : {
+      curviness: 1.25,
+      autoRotate: true,
+      values: [
+          {x: 100,	y: -20},
+          {x: 300,	y: 10}
+        ]
+    },
+    looping : {
+      curviness: 1.25,
+      autoRotate: true,
+      values: [
+          {x: 510,	y: 60},
+          {x: 620,	y: -60},
+          {x: 500,	y: -100},
+          {x: 380,	y: 20},
+          {x: 500,	y: 60},
+          {x: 580,	y: 20},
+          {x: 620,	y: 15}
+        ]
+    },
+    leave : {
+      curviness: 1.25,
+      autoRotate: true,
+      values: [
+          {x: 660,	y: 20},
+          {x: 800,	y: 130},
+          {x: $(window).width() + 300,	y: -100},
+        ]
+    }
+  };
+  // init controller
+  var controller = new ScrollMagic.Controller({loglevel: 3});
 
-							//	.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
-								.addTo(controller);
+  // create tween
+  var tween = new TimelineMax()
+    .add(TweenMax.to($("#rocket"), 1.2, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}))
+    .add(TweenMax.to($("#rocket"), 3, {css:{bezier:flightpath.looping}, ease:Power1.easeInOut}))
+    .add(TweenMax.to($("#rocket"), 2, {css:{bezier:flightpath.leave}, ease:Power1.easeInOut}));
 
+  // build scene
+  var scene = new ScrollMagic.Scene({ triggerElement: "#trigger", duration: 1600, offset: 100, loglevel: 3})
+
+          .setPin("#rocket")
+          .setTween(tween)
+          .addIndicators() // add indicators (requires plugin)
+          .addTo(controller);
+})
 
 $(document).mousemove(function(e){
    var x = e.pageX-50,

@@ -12,11 +12,33 @@
 </head>
 
 <body>
+
 <style>
+/*.scene {
+  overflow-y: hidden;
+}*/
+.rocketholder {
+overflow: hidden;
+}
+
+#rocket {
+width: 200px;
+position: absolute;
+z-index: 999;
+top:50%;
+left:-200px;
+}
 
 </style>
+
+  <div class="rocketholder">
+    <img id="rocket" src="img/rocket.png" alt="">
+  </div>
 <div class="overlay">
 </div>
+
+
+
 
     <header>
         <div class="eye">
@@ -83,6 +105,9 @@
         </div>
     </nav>
     <div class="scene" id="homepage">
+
+
+
       <canvas id="c"></canvas>
 
         <div class="logowrapper">
@@ -135,7 +160,15 @@ margin: -137.5px 0 0 -230.5px;
         </div>
     </div>
 
+    <style>
 
+
+    .svg-arrow {
+        width: 400px;
+        margin: auto;
+        height: 200px;
+    }
+    </style>
     <div class="scene" id="portfolio">
         <div class="sliderwrapper">
 
@@ -144,31 +177,13 @@ margin: -137.5px 0 0 -230.5px;
                 <div>
                     <div class="slide-item-wrapper">
 
+                      <div class="box">
+                        <H1><b>This IS A TEST</b></H1>
+                      </div>
+
                         <div class="text-block">
-                          <style>
 
 
-                          .svg-arrow {
-                              width: 400px;
-                              margin: auto;
-                              height: 200px;
-                          }
-                          </style>
-                          <div class="svg-arrow">
-
-
-                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 100">
-                            <defs>
-                              <marker id="arrowhead" markerWidth="10" markerHeight="7"
-                              refX="0" refY="3.5" orient="auto">
-                                <polygon points="0 0, 10 3.5, 0 7" />
-                              </marker>
-                            </defs>
-                            <line x1="0" y1="50" x2="250" y2="50" stroke="#000"
-                            stroke-width="8" marker-end="url(#arrowhead)" />
-                          </svg>
-
-                          </div>
                             <h2 class="block-text">Great <span>ideas</span> don't need approvals, <br>they need <span>application</span>.</h2>
                         </div>
 
