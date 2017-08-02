@@ -211,7 +211,7 @@ hr {
     }
 
   #intro {
-    background: url(img/demo-1-bg.jpg) no-repeat center center fixed; 
+    background: url(img/demo-1-bg.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -230,16 +230,15 @@ hr {
   }
 
   #form-name, #form-email, #subject {
-      width: 100%;
-      background-color: transparent;
-      border: none;
-      border-bottom: 1px solid #79bd8f;
-      color: #00a388;
-      box-sizing: border-box;
-      font-family: 'Arvo';
-      font-size: 22px;
-      position: relative;
-      a text-align: center;
+        width: 100%;
+        background-color: #482d52;
+        border: none;
+        border-bottom: 1px solid #27273c;
+        color: #ffffff;
+        box-sizing: border-box;
+        font-family: 'Arvo';
+        font-size: 22px;
+        position: relative;
   }
 
   .form input {
@@ -324,6 +323,7 @@ hr {
 
   .success h1 {
       font-family: 'Pacifico', cursive;
+      color: white;
   }
 
   .forminput::-webkit-input-placeholder {
@@ -945,6 +945,16 @@ hr {
   /*position: relative;*/
 }
 
+.svg-toolkit {
+    text-align: center;
+    margin: 20px 0 20px 0;
+}
+
+.svg-ninja {
+  text-align: center;
+    margin: 20px 0 20px 0;
+}
+
 
 .text-block {
 
@@ -965,6 +975,7 @@ height: 50%;*/
   text-transform: uppercase;
   margin: 0 auto;
   text-align: center;
+  color:white;
 }
 
 /*Typing animation*/

@@ -26,7 +26,7 @@ if ( ! empty($errors)) {
 
   // if there are no errors, return a message
   $data['success'] = true;
-  $data['message'] = 'We will contact you soon!!';
+  $data['message'] = 'I will contact you ASAP!!';
 }
 
 // return all our data to an AJAX call

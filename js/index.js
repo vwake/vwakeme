@@ -1,18 +1,43 @@
-$(function () { // wait for document ready
+  $(function () { // wait for document ready
+
+
+$("#submit").hover(over, out);
+
+function over(){
+TweenMax.to($("#erocket"), 0.5, {right:"0"})
+}
+
+function out(){
+TweenMax.to($("#erocket"), 0.5, {right: "-230px"})
+
+}
+
+var er = new TimelineLite({paused:true})
+
+er.to("#erocket", 1, {x:-$(window).width()-300});
+
+$("#submit").on("click", function() {
+  er.play();
+})
+
+
+
   var flightpath = {
     entry : {
       curviness: 1.25,
       autoRotate: true,
       values: [
-          {x: 100,	y: -20},
-          {x: 300,	y: 10}
+          {x: 300,	y: 10},
+          {x: 400,	y: 20},
+          {x: $(window).width()+300,	y: 25},
+
         ]
     },
     looping : {
       curviness: 1.25,
       autoRotate: true,
       values: [
-          {x: 510,	y: 60},
+          {x: 650,	y: 10},
           {x: 620,	y: -60},
           {x: 500,	y: -100},
           {x: 380,	y: 20},
@@ -36,12 +61,12 @@ $(function () { // wait for document ready
 
   // create tween
   var tween = new TimelineMax()
-    .add(TweenMax.to($("#rocket"), 1.2, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}))
+    .add(TweenMax.to($("#rocket"), 1, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}))
     .add(TweenMax.to($("#rocket"), 3, {css:{bezier:flightpath.looping}, ease:Power1.easeInOut}))
     .add(TweenMax.to($("#rocket"), 2, {css:{bezier:flightpath.leave}, ease:Power1.easeInOut}));
 
   // build scene
-  var scene = new ScrollMagic.Scene({ triggerElement: "#trigger", duration: 1600, offset: 100, loglevel: 3})
+  var scene = new ScrollMagic.Scene({ triggerHook:1, duration: 1600, offset: 0, loglevel: 3})
 
           .setPin("#rocket")
           .setTween(tween)
@@ -266,25 +291,25 @@ loop();
 
     });
 
-// Logo Animation
-
-    tl = new TimelineMax();
-
-    // clears the stage
-    tl.set(logotext, {opacity:0});
-    tl.set(rightlink, {x:32.5, y:16, rotation:0});
-    tl.set(leftlink, {x:-32.5, y:-16});
-
-    tl.to(rightlink, 0.5, {x: 0, y: 0,  ease:Power4.easeOut}, 2)
-      .to(leftlink, 0.5, {x: 0, y: 0,  ease:Power4.easeOut}, 2)
-      .to(logotext, 1.5, {opacity:1, ease:Power4.easeOut}, 3);
-
-    $btnPlay.click(
-        function(){
-          tl.timeScale(1).seek(0);
-        }
-        );
-// end of Logo Animation
+// // Logo Animation
+//
+//     tl = new TimelineMax();
+//
+//     // clears the stage
+//     tl.set(logotext, {opacity:0});
+//     tl.set(rightlink, {x:32.5, y:16, rotation:0});
+//     tl.set(leftlink, {x:-32.5, y:-16});
+//
+//     tl.to(rightlink, 0.5, {x: 0, y: 0,  ease:Power4.easeOut}, 2)
+//       .to(leftlink, 0.5, {x: 0, y: 0,  ease:Power4.easeOut}, 2)
+//       .to(logotext, 1.5, {opacity:1, ease:Power4.easeOut}, 3);
+//
+//     $btnPlay.click(
+//         function(){
+//           tl.timeScale(1).seek(0);
+//         }
+//         );
+// // end of Logo Animation
 
 
         var item_length = 3;
