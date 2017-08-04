@@ -1,0 +1,26 @@
+{
+  "name": "vwake",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vwake/vwakeme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vwake/vwakeme/issues"
+  },
+  "homepage": "https://github.com/vwake/vwakeme#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "gsap": "^1.20.2",
+    "jquery": "^3.2.1",
+    "normalize.css": "^7.0.0",
+    "scrollmagic": "^2.0.5"
+  }
+}

@@ -1,5 +1,13 @@
   $(function () { // wait for document ready
-
+    var controller = new ScrollMagic.Controller({loglevel: 3});
+    //
+    // var scene2 = new ScrollMagic.Scene({
+  	// 						triggerElement: "#trigger2"
+    //
+  	// 					})
+  	// 					.setTween(".cloud1", 0.5, {backgroundColor: "green", right:0}) // trigger a TweenMax.to tween
+  	// 					.addIndicators({name: "Trigger 2"}) // add indicators (requires plugin)
+  	// 					.addTo(controller);
 
 $("#submit").hover(over, out);
 
@@ -26,6 +34,7 @@ $("#submit").on("click", function() {
     entry : {
       curviness: 1.25,
       autoRotate: true,
+      scaleY:10,
       values: [
           {x: 300,	y: 10},
           {x: 400,	y: 20},
@@ -52,21 +61,21 @@ $("#submit").on("click", function() {
       values: [
           {x: 660,	y: 20},
           {x: 800,	y: 130},
-          {x: $(window).width() + 300,	y: -100},
+          {x: $(window).width() + 300,	y: 100},
         ]
     }
   };
   // init controller
-  var controller = new ScrollMagic.Controller({loglevel: 3});
+
 
   // create tween
   var tween = new TimelineMax()
-    .add(TweenMax.to($("#rocket"), 1, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}))
+    .add(TweenMax.to($("#rocket"), 2, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}))
     .add(TweenMax.to($("#rocket"), 3, {css:{bezier:flightpath.looping}, ease:Power1.easeInOut}))
     .add(TweenMax.to($("#rocket"), 2, {css:{bezier:flightpath.leave}, ease:Power1.easeInOut}));
 
   // build scene
-  var scene = new ScrollMagic.Scene({ triggerHook:1, duration: 1600, offset: 0, loglevel: 3})
+  var scene = new ScrollMagic.Scene({ triggerHook:1, duration: $(window).height()*3, offset: 0, loglevel: 3})
 
           .setPin("#rocket")
           .setTween(tween)
