@@ -1,29 +1,33 @@
   $(function () { // wait for document ready
 
 
+        TweenMax.set('svg', {
+      visibility: 'visible'
+    })
 
-    var speed = 0.9;
-    var WIDTH;
-    var HEIGHT;
-    var rocketwidth;
-    var scale;
-    var control = false;
-    var progress = 0.0;
+    var tl = new TimelineMax();
+    tl.staggerTo('#bubbleGroup circle', 3, {
+      attr: {
+        cy: 200
+      },
+      ease:Power2.easeIn,
+      repeat: -1
+    }, 0.6)
 
-    var _rocketholder = $('.rocketholder');
-    var _rocket = $('#rocket');
+    $('body').imagesLoaded( function() {
 
-    var resize = function() {
-    WIDTH = window.innerWidth;
-    HEIGHT = window.innerHeight;
-    scale = WIDTH / 1440;
+    // images have loaded
+    console.log("all Images are loaded");
+    TweenMax.set('svg', {
+    visibility: 'none'
+    })
 
-    rocketwidth = _castle.width() * scale;
+     TweenMax.to($(".overlay"), 1, { opacity:0, zIndex: -999});
 
-    TweenLite.set(_rocket, {scale: scale * 0.85});
-};
+    });
 
-$(window).on('resize', resize);
+
+
 
     var controller = new ScrollMagic.Controller({loglevel: 3});
     //
@@ -93,16 +97,16 @@ $("#submit").on("click", function() {
   };
   // init controller
 
-TweenMax.set($(".svglogo"), {opacity:0.1, yoyo:false});
+
   // create tween
   var tween = new TimelineMax()
-    .add(TweenMax.to($(".svglogo"), 1, {opacity:1, repeat: -1}))
+
     .add(TweenMax.to($("#rocket"), 2, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}))
     .add(TweenMax.to($("#rocket"), 3, {css:{bezier:flightpath.looping}, ease:Power1.easeInOut}))
     .add(TweenMax.to($("#rocket"), 2, {css:{bezier:flightpath.leave}, ease:Power1.easeInOut}));
 
   // build scene
-  var scene = new ScrollMagic.Scene({ triggerHook:1, duration: $(window).height()*3, offset: 0, loglevel: 3})
+  var scene = new ScrollMagic.Scene({ triggerHook:1, duration: $(window).height()*5, offset: 0, loglevel: 3})
 
           .setPin("#rocket")
           .setTween(tween)
@@ -255,10 +259,20 @@ loop();
         	e.preventDefault();
       	});
 
-
+        function validateEmail($email) {
+var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+return emailReg.test( $email );
+}
+var emailaddress = $('input[name=Email]').val();
 
     submit.click(function() {
             console.log( "submit was clicked" );
+
+if( !validateEmail(emailaddress)) {
+console.log("email Is Valid");
+ } else {
+   console.log("Email is not valid");
+ }
 
             var formData = {
                 'name'              : $('input[name=Name]').val(),
@@ -278,6 +292,9 @@ loop();
 
                 $('.help-block').remove(); // remove the error text
                 $('.alert').remove(); // remove the error text
+                $('#form-name').removeClass('formerror');
+                $('#subject').removeClass('formerror');
+                $('#form-email').removeClass('formerror');
 
 
                 // log data to the console so we can see
@@ -289,21 +306,28 @@ loop();
                 if (data.errors.name) {
                     $('#console').append('<div class="help-block">' + data.errors.name + '</div>'); // add the actual error message under our input
 										$('#form-name').attr("placeholder", data.errors.name);
-										$('#name-input').addClass('formerror');
+										$('#form-name').addClass('formerror');
                 }
 
                 // handle errors for email ---------------
                 if (data.errors.email) {
                     $('#console').append('<div class="help-block">' + data.errors.email + '</div>');
 										$('#form-email').attr("placeholder", data.errors.email);
-										$('#email-input').addClass('formerror');
+										$('#form-email').addClass('formerror');
                 }
 
                 // handle errors for superhero alias ---------------
                 if (data.errors.message) {
                     $('#console').append('<div class="help-block">' + data.errors.message + '</div>');
 										$('#subject').attr("placeholder", data.errors.message);
-										$('#message-input').addClass('formerror');
+										$('#subject').addClass('formerror');
+                }
+
+                // handle errors for superhero alias ---------------
+                if (data.errors.emailvalid) {
+                  $('#console').append('<div class="help-block">' + data.errors.emailvalid + '</div>');
+                  $('#form-email').attr("placeholder", data.errors.emailvalid);
+                  $('#form-email').addClass('formerror');
                 }
 
             } else {

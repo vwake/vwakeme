@@ -20,47 +20,21 @@
 
   .overlay {
     position: fixed;
-    background: url(asanoha-400px.png);
-    -webkit-animation: 100s scroll infinite linear;
-    -moz-animation: 100s scroll infinite linear;
-    -o-animation: 100s scroll infinite linear;
-    -ms-animation: 100s scroll infinite linear;
-    animation: 100s scroll infinite linear;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    overflow: hidden;
+    background: white;
   }
+  svg.svgoverlay {
+  width: 100%;
+  height:100%;
+  visibility: hidden;
+}
 
-  @-webkit-keyframes scroll {
-    100% {
-      background-position: 0px -3000px;
-    }
-  }
 
-  @-moz-keyframes scroll {
-    100% {
-      background-position: 0px -3000px;
-    }
-  }
-
-  @-o-keyframes scroll {
-    100% {
-      background-position: 0px -3000px;
-    }
-  }
-
-  @-ms-keyframes scroll {
-    100% {
-      background-position: 0px -3000px;
-    }
-  }
-
-  @keyframes scroll {
-    100% {
-      background-position: 0px -3000px;
-    }
-  }
   /*end of style overlay*/
   /*menu styles*/
 
@@ -86,6 +60,7 @@
     min-width: 100vw;
     position: relative;
   }
+
   /*logo styles*/
 
   #svglogo {
@@ -135,7 +110,54 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  .svglogo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width:461px;
+  height:275px;
+  margin: -137.5px 0 0 -230.5px;
+  -webkit-animation-duration: 10s;
+            animation-duration: 10s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-name: bounce;
+            animation-name: bounce;
+            animation-iteration-count:infinite;
+
+  }
+
+  @-webkit-keyframes bounce {
+              0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
+              40% {-webkit-transform: translateY(-30px);}
+              60% {-webkit-transform: translateY(-15px);}
+           }
+
+           @keyframes bounce {
+              0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+              40% {transform: translateY(-30px);}
+              60% {transform: translateY(-15px);}
+           }
+
   /*end of logo styles*/
+
+  /*start of main rocket*/
+  .rocketholder {
+  overflow: hidden;
+  }
+
+  #rocket {
+  width: 250px;
+  position: absolute;
+  z-index: 999;
+  top:250px;
+  left:-200px;
+  }
+
+
+
+  /*end of main rocket*/
   /*custom common page styles*/
 
   .textwrapper {
@@ -204,7 +226,14 @@
   }
   /*End Of Homepage Custom Styles*/
 
-  #team {}
+/*start of skills Styles*/
+  #skills {}
+
+    #skillsimg {
+    width: 100%;
+}
+
+/*end of skills Styles*/
 
   #portfolio {
     /*background: #27273C;*/
@@ -290,8 +319,8 @@
   }
 
   .formerror {
-    border: 1px solid red;
-    color: red;
+    border: 1px solid #791414 !important;
+    color: #d60d0d !important;
   }
 
   .forminput {
@@ -351,7 +380,7 @@
   }
 
   .success h1 {
-    font-family: 'Pacifico', cursive;
+
     color: white;
   }
 
@@ -382,7 +411,7 @@
   }
 
   #contact .textwrapper {
-    z-index: 999999;
+        z-index: 9999;
   }
 
   @keyframes move_wave {
@@ -514,7 +543,7 @@ background-position: 1000px 0, 1200px 0, 1100px 0;
     -webkit-transition: right 0.2s linear;
     transition: right 0.2s linear;
     width: 300px;
-    z-index: 99999;
+    z-index: 9999;
     /* IT'S OVER 9000! */
   }
 
@@ -572,6 +601,9 @@ background-position: 1000px 0, 1200px 0, 1100px 0;
     text-transform: uppercase;
   }
 
+  a.menulinks:hover {
+      color: #86367A;
+  }
   nav a:nth-child(n+2):after {
     background: #382a47;
     content: '';
