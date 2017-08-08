@@ -1,7 +1,13 @@
   @import url('https://fonts.googleapis.com/css?family=Roboto');
-  @import url('https://fonts.googleapis.com/css?family=Pacifico');
+  @import url('https://fonts.googleapis.com/css?family=Coda&subset=latin');
+
+
+* {
+ font-family: 'Coda', sans-serif;
+}
+
   body {
-    font-family: 'Roboto', sans-serif;
+
     overflow-x: hidden;
   }
   /*BASE STYLES*/
@@ -76,7 +82,8 @@
   /*end of meqnu styles*/
 
   .scene {
-    height: 100vh;
+    min-height: 100vh;
+    min-width: 100vw;
     position: relative;
   }
   /*logo styles*/
@@ -96,6 +103,18 @@
   #rightlink {
     fill: #00A388;
   }
+
+  h1.block-text {
+    font-size: 35px;
+    font-weight: 900;
+    letter-spacing: .15em;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 0 30px 0;
+}
+
 
   .text {
     opacity: 0;
@@ -123,7 +142,6 @@
     text-align: center;
     margin: auto;
     width: 75vw;
-    font-family: 'Pacifico', cursive;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -192,6 +210,23 @@
     /*background: #27273C;*/
     background-image: linear-gradient(to top, #27273c 5%, rgb(57, 42, 72) 95%);
   }
+
+  .abouttitle {
+      font-size: 3.998em;
+  }
+
+  .aboutmetext {
+    font-size: 1.8em;
+}
+
+.aboutmesummary {
+    font-size: 0.8em;
+}
+
+.aboutmegetintouch {
+    font-weight: bold;
+    font-size: 1.2em;
+}
 
   #intro {
     background: url(img/demo-1-bg.jpg) no-repeat center center fixed;
@@ -439,6 +474,23 @@
   #contact h3 {
     color: #a9a3a3;
   }
+
+  #cloud-intro{
+position: relative;
+height: 35%;
+background: url(./img/clouds1000.png);
+animation: wind 20s linear infinite;
+    z-index: 99;
+}
+@keyframes wind{
+0% {
+background-position: 0 0, 0 300px, 0 250px;
+}
+100% {
+background-position: 1000px 0, 1200px 0, 1100px 0;
+}
+
+}
   /*end of contact form */
 
   a {
@@ -1094,8 +1146,6 @@ height: 50%;*/
 
 .pb-wrap {
 background: #86377B;
-
-padding: 10px;
 }
 
 figure {

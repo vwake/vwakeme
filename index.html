@@ -142,7 +142,7 @@ margin: -137.5px 0 0 -230.5px;
     </div>
 
     <div class="scene" id="intro">
-        <div class="textwrapper">
+        <div class="textwrapper introwrapper">
             <h1 class="banner">I <3 Webdev</h1>
 
             <div id="message">
@@ -177,10 +177,15 @@ padding: 20px;
     </style>
     <div class="scene" id="portfolio">
       <style>
+      .aboutimgholder {
+    text-align: center;
+}
 
       #aboutimg {
           max-width: 100%;
           max-height: 100%;
+          padding-top: 50px;
+
       }
       .aboutholder {
         padding:50px;
@@ -194,7 +199,10 @@ padding: 20px;
 <div class="container portfoliowrapper">
   <div class="row">
     <div class="col-md-4">
+      <div class="aboutimgholder">
+
       <img id="aboutimg" src="http://placehold.it/400X300" alt="">
+    </div>
     </div>
     <div class="col-md-8">
       <div class="aboutholder">
@@ -203,7 +211,18 @@ padding: 20px;
         Hi, I am Vivek!
       </div>
       <div class="aboutmetext">
-        I love building and tinkering with things
+      Freelance Web Developer based in Bangalore, India.
+    <div class="aboutmesummary">
+
+    I've always been drawn to the overlap between design and development. My skills are broad: from ux to design, front end to back end development. I enjoy each aspect, and love building sites from start to finish, for clients all over the world. New experiences and challenges are my thing.
+  </div>
+  <div class="aboutmegetintouch">
+
+        If you have any cool projects or opportunities, <a href="#contact">get in touch!</a>
+      </div>
+
+
+
 
       </div>
     </div>
@@ -218,26 +237,26 @@ padding: 20px;
 
 
     </style>
-      <div class="text-block-alt container">
+      <div class="text-block-alt container-fluid">
         <div class="row">
           <div class="col-m-12">
             <h1 class="slide-title">Recents Works</h1>
           </div>
         </div>
         <div class="row portrow">
-          <div class="col-sm-4 portbox">
+          <div class="col-md-4 portbox">
             <div class="pb-wrap">
               <figure><img class="portimg" src="portfolio_img/KatWild.png" alt=""></figure>
           </div>
         </div>
 
-          <div class="col-sm-4 portbox">
+          <div class="col-md-4 portbox">
             <div class="pb-wrap">
               <figure><img class="portimg" src="portfolio_img/ZillaWorld_thumbnail.png" alt=""></figure>
           </div>
         </div>
 
-          <div class="col-sm-4 portbox">
+          <div class="col-md-4 portbox">
             <div class="pb-wrap">
               <figure><img class="portimg" src="portfolio_img/ZillaMortgage_thumbnail.png" alt=""></figure>
           </div>
@@ -248,7 +267,6 @@ padding: 20px;
           <div class="col-m-12">
             <style>
             #viewmore {
-              font-family: 'Pacifico', cursive;
 
             }
 
@@ -285,7 +303,7 @@ hr.style-eight:after {
     <div class="scene" id="skills">
 <div class="textwrapper container">
 
-      <h2 class="block-text">Skills</h2>
+      <h1 class="block-text">Skills</h1>
       <div class="imageholder">
         <img id="skills" class="" src="img/skills.png" alt="">
       </div>
@@ -307,26 +325,7 @@ hr.style-eight:after {
       <div class="cloud1">
       </div> -->
 
-      <style>
-      #cloud-intro{
-  position: relative;
-  height: 35%;
-  background: url(https://static.radulescu.me/examples/clouds/clouds1000.png);
 
-
-	animation: wind 20s linear infinite;
-  z-index: 99999;
-}
-@keyframes wind{
-  0% {
-    background-position: 0 0, 0 300px, 100px 250px;
-  }
-  100% {
-    background-position: 1000px 50px, 1200px 300px, 1100px 250px;
-  }
-
-}
-</style>
 
       <div id="cloud-intro"></div>
         <div class="textwrapper">

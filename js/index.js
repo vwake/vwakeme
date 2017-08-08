@@ -1,4 +1,30 @@
   $(function () { // wait for document ready
+
+
+
+    var speed = 0.9;
+    var WIDTH;
+    var HEIGHT;
+    var rocketwidth;
+    var scale;
+    var control = false;
+    var progress = 0.0;
+
+    var _rocketholder = $('.rocketholder');
+    var _rocket = $('#rocket');
+
+    var resize = function() {
+    WIDTH = window.innerWidth;
+    HEIGHT = window.innerHeight;
+    scale = WIDTH / 1440;
+
+    rocketwidth = _castle.width() * scale;
+
+    TweenLite.set(_rocket, {scale: scale * 0.85});
+};
+
+$(window).on('resize', resize);
+
     var controller = new ScrollMagic.Controller({loglevel: 3});
     //
     // var scene2 = new ScrollMagic.Scene({
@@ -34,7 +60,7 @@ $("#submit").on("click", function() {
     entry : {
       curviness: 1.25,
       autoRotate: true,
-      scaleY:10,
+      scaleY: 2.0,
       values: [
           {x: 300,	y: 10},
           {x: 400,	y: 20},
@@ -67,9 +93,10 @@ $("#submit").on("click", function() {
   };
   // init controller
 
-
+TweenMax.set($(".svglogo"), {opacity:0.1, yoyo:false});
   // create tween
   var tween = new TimelineMax()
+    .add(TweenMax.to($(".svglogo"), 1, {opacity:1, repeat: -1}))
     .add(TweenMax.to($("#rocket"), 2, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}))
     .add(TweenMax.to($("#rocket"), 3, {css:{bezier:flightpath.looping}, ease:Power1.easeInOut}))
     .add(TweenMax.to($("#rocket"), 2, {css:{bezier:flightpath.leave}, ease:Power1.easeInOut}));
